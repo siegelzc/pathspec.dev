@@ -26,6 +26,10 @@ textarea {
     border: none;
 }
 
+textarea {
+    resize: none;
+}
+
 .input-container {
     margin: 0 5%;
 
