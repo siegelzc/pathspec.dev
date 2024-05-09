@@ -1,4 +1,4 @@
-rootProject.name = "pathspectator"
+rootProject.name = "pathspec"
 
 pluginManagement {
     repositories {

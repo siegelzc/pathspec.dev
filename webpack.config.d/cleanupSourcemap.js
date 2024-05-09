@@ -1,3 +1,4 @@
+// See: https://github.com/Kotlin/kotlin-wasm-examples/blob/main/browser-example/webpack.config.d/cleanupSourcemap.js
 // Replace paths unavailable during compilation with `null`, so they will not be shown in devtools
 ;
 (() => {
