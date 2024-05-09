@@ -1,19 +1,11 @@
 package eval
 
-import kotlinx.browser.document
-import kotlinx.dom.createElement
+import kotlinx.html.TagConsumer
+import kotlinx.html.js.textArea
 import org.w3c.dom.Element
-import org.w3c.dom.HTMLTextAreaElement
 
-fun Element.testCaseInput(): Element {
-    append(testCaseInput)
-    return testCaseInput
-}
-
-internal val testCaseInput = document.createElement("textarea") {
-    this as HTMLTextAreaElement
-
+fun TagConsumer<Element>.testCaseInput(): Element = textArea {
+    rows = 10.toString()
     placeholder = "test cases.."
-    rows = 10
     required = true
 }

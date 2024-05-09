@@ -1,11 +1,12 @@
-import eval.inputContainer
 import eval.pathspecInput
 import eval.testCaseInput
 import kotlinx.browser.document
+import kotlinx.html.dom.append
+import kotlinx.html.js.div
 
 fun main() {
-    document.body!!.apply {
-        inputContainer().apply {
+    document.body!!.append {
+        div(classes = "input-container") {
             pathspecInput()
             testCaseInput()
         }

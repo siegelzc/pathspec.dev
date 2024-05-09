@@ -1,21 +1,13 @@
 package eval
 
-import dom.InputType
-import kotlinx.browser.document
-import kotlinx.dom.createElement
+import kotlinx.html.InputType
+import kotlinx.html.TagConsumer
+import kotlinx.html.input
 import org.w3c.dom.Element
-import org.w3c.dom.HTMLInputElement
 
-fun Element.pathspecInput(): Element {
-    append(pathspecInput)
-    return pathspecInput
-}
-
-internal val pathspecInput = document.createElement("input") {
-    this as HTMLInputElement
-
-    type = InputType.TEXT.domValue
+fun TagConsumer<Element>.pathspecInput(): Element = input {
+    type = InputType.text
     placeholder = "pathspec..."
-    autofocus = true
+    autoFocus = true
     required = true
 }
