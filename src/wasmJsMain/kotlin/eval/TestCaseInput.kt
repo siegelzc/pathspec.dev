@@ -1,13 +1,18 @@
 package eval
 
 import kotlinx.browser.document
+import kotlinx.dom.createElement
+import org.w3c.dom.Element
 import org.w3c.dom.HTMLTextAreaElement
 
-val TestCaseInput: HTMLTextAreaElement by lazy {
-    val element = document.createElement("textarea") as HTMLTextAreaElement
-    element.apply {
-        placeholder = "test cases.."
-        rows = 10
-        required = true
-    }
+val TestCaseInput: Element by lazy {
+    InputContainer(textarea)
+}
+
+internal val textarea = document.createElement("textarea") {
+    this as HTMLTextAreaElement
+
+    placeholder = "test cases.."
+    rows = 10
+    required = true
 }
