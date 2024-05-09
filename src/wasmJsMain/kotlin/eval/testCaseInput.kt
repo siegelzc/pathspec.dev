@@ -5,11 +5,12 @@ import kotlinx.dom.createElement
 import org.w3c.dom.Element
 import org.w3c.dom.HTMLTextAreaElement
 
-val TestCaseInput: Element by lazy {
-    InputContainer(textarea)
+fun Element.testCaseInput(): Element {
+    append(testCaseInput)
+    return testCaseInput
 }
 
-internal val textarea = document.createElement("textarea") {
+internal val testCaseInput = document.createElement("textarea") {
     this as HTMLTextAreaElement
 
     placeholder = "test cases.."

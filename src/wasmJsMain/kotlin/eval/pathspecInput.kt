@@ -6,11 +6,12 @@ import kotlinx.dom.createElement
 import org.w3c.dom.Element
 import org.w3c.dom.HTMLInputElement
 
-val PathspecInput: Element by lazy {
-    InputContainer(input)
+fun Element.pathspecInput(): Element {
+    append(pathspecInput)
+    return pathspecInput
 }
 
-internal val input = document.createElement("input") {
+internal val pathspecInput = document.createElement("input") {
     this as HTMLInputElement
 
     type = InputType.TEXT.domValue
