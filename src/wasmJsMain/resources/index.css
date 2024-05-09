@@ -13,19 +13,36 @@ body {
 
 input,
 textarea {
-    width: 90%;
+    display: block;
+    box-sizing: border-box;
+
+    width: 100%;
+    padding: .5rem .2rem;
 
     font-family: monospace;
     font-size: large;
 
+    outline: none;
     border: none;
-    border-bottom: 2px solid black;
-    border-radius: 2px;
 }
 
 .input-container {
-    display: flex;
-    justify-content: center;
+    margin: 0 5%;
+
+    border-style: solid;
+    border-color: black;
+    border-width: .2rem;
+    border-left-width: 1rem;
+}
+
+.input-container > * {
+    border-bottom-width: .15rem;
+    border-bottom-style: solid;
+    border-bottom-color: black;
+}
+
+.input-container > *:last-child {
+    border-bottom: none;
 }
 
 .code {
