@@ -9,22 +9,25 @@
 
     <link rel="stylesheet" href="index.css"/>
 </head>
+
 <body>
 
 <!--suppress HtmlUnknownTarget -->
 <script src="pathspec.js"></script>
 
 <div class="input-container">
-    <label>
+    <label for="pathspec">
         <input
+                id="pathspec"
                 type="text"
                 placeholder="pathspec..."
                 autoFocus
                 required
         />
     </label>
-    <label>
+    <label for="test-cases">
         <textarea
+                id="test-cases"
                 rows=10
                 placeholder="test cases..."
                 required
@@ -53,7 +56,5 @@
     </ul>
 </div>
 </body>
-
-<script type="application/javascript" src="wasm_error_handling.js"></script>
 
 </html>
