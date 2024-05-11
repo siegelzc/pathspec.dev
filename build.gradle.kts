@@ -9,6 +9,7 @@ group = "dev.pathspec"
 version = "1.0-SNAPSHOT"
 
 object Versions {
+    const val KOTLIN_VERSION = "1.9.20"
     const val KOTLINX_HTML = "0.11.0"
 }
 

@@ -1,5 +1,5 @@
-import event.registerEventListeners
+import components.Component
 
 fun main() {
-    registerEventListeners()
+    Component.registerAll()
 }
